@@ -1,0 +1,17 @@
+Aggregator module won't provide any functionality by its own, just it gathers and bundles
+together a bunch of other modules.
+
+module aggregatorModule
+2) {
+3) requires transitive moduleA;
+4) requires transitive moduleB;
+5) requires transitive moduleC;
+6) }
+
+If any module reads aggregatorModule automatically all 3 modules are by default available to that
+module also.
+1) module useModule
+2) {
+3) requires aggregatorModule;
+4) }
+Now useModule can use functionality of all 3 modules moduleA, moduleB and moduleC.

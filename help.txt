@@ -15,3 +15,7 @@ module also.
 3) requires aggregatorModule;
 4) }
 Now useModule can use functionality of all 3 modules moduleA, moduleB and moduleC.
+
+two modules cannot contain a package with same name; otherwise
+we will get compile time error. Hence in module system, there is no chance of version conflicts and
+abnormal behavior of the program.
